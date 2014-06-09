@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+void main (void){
+
+	int Matsuki = 176;
+	int Yamane = 173;
+	int Kawakami = 162;
+	int Sakuma = 178;
+	int Higashi = 184;
+
+	int* Kato;
+	int* Nagata;
+
+	cout << endl;
+	cout << "松木君の身長:" << Matsuki << endl;
+	cout << "山根君の身長:" << Yamane << endl;
+	cout << "川上君の身長:" << Kawakami << endl;
+	cout << "佐久間君の身長:" << Sakuma << endl;
+	cout << "東君の身長:" << Higashi << endl;
+
+	Kato = &Matsuki;
+	
+	Nagata = &Sakuma;
+
+	cout << "加藤さんの好きな人の身長:" << *Kato << endl;
+	cout << "永田さんの好きな人の身長:" << *Nagata << endl;
+
+	cout << "ポインターパワー爆裂！！" << endl;
+
+	Kato = &Yamane;
+
+	*Nagata = 185;
+
+	cout << "加藤さんの好きな人の身長:" << *Kato << endl;
+	cout << "永田さんの好きな人の身長:" << *Nagata << endl;
+
+	cout << endl;
+	cout << "松木君の身長:" << Matsuki << endl;
+	cout << "山根君の身長:" << Yamane << endl;
+	cout << "川上君の身長:" << Kawakami << endl;
+	cout << "佐久間君の身長:" << Sakuma << endl;
+	cout << "東君の身長:" << Higashi << endl;
+
+
+}
